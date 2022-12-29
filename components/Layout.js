@@ -25,12 +25,12 @@ function Layout({children, title}) {
           <Image src="/logo.svg" alt="logo" width={200} height={120} />
           <div className="flex items-center w-2/6 justify-evenly">
             <span>
-              <button className="bg-blue-700 font-bold text-xl text-white rounded-full p-5 px-8">
+              <button className="hidden md:block bg-blue-700 font-bold text-xl text-white rounded-full p-5 px-8">
                 OPEN ACCOUNT
               </button>
             </span>
             <span>
-              <button className="bg-slate-200 font-bold text-xl text-blue-700 rounded-full p-5 px-10">
+              <button className="hidden md:block bg-slate-200 font-bold text-xl text-blue-700 rounded-full p-5 px-10">
                 LOG IN
               </button>
             </span>

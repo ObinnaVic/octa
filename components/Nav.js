@@ -12,7 +12,7 @@ function Nav({ handleNavOff }) {
   
   return (
     <div>
-      <div className="flex font-bold justify-evenly">
+      <div className="hidden md:flex font-bold justify-evenly">
         {Data.map((item) => {
           const { menu, id } = item;
           return (
