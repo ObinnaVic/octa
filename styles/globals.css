@@ -19,12 +19,13 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+.hero-sec {
+  background-color: rgb(11, 14, 70);
+  height: 80vh;
+}
+
+@media only screen and (max-width:480px) {
+  .hero-sec{
+    height: 120vh;
   }
 }
