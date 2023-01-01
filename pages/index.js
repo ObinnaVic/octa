@@ -1,8 +1,17 @@
 import Layout from "../components/Layout";
 import Image from "next/image";
 import Hero from "../public/hero.jpeg";
+import { useContext } from "react";
+import { AppContext } from "../components/Store";
+import { dataTwo } from "../Utils/Data";
 
 export default function Home() {
+  const {state, dispatch} = useContext(AppContext);
+  const {imageData} = state;
+
+  const HandleSecImages = (id) => {
+    dispatch({type: "IMAGECHANGER", payload: id})
+  }
 
   return (
     <Layout title={"Home-Octa"}>
@@ -28,8 +37,51 @@ export default function Home() {
           Your safe space for investing
         </h1>
         <div className="flex flex-col md:flex-row">
-          <div className="flex flex-row md:flex-col">
-            
+          <div className="flex flex-col justify-center items-center md:w-1/2">
+            {dataTwo.map((item) => {
+              const { Head, id, list } = item;
+              return (
+                <div
+                  className="bg-white hover:bg-blue-700 transition-transform p-3 md:p-7 mb-4 rounded-3xl w-5/6 md:w-3/5 shadow-lg"
+                  onMouseOver={(e) => HandleSecImages(id)}
+                >
+                  <h3 className="font-semibold text-sm md:text-3xl">{Head}</h3>
+                  <div className="p-4">
+                    <ul className="list-disc">
+                      <li className="text-sm md:text-xl">{list.listOne}</li>
+                      {list.listTwo ? (
+                        <li className="text-sm md:text-xl">{list.listTwo}</li>
+                      ) : (
+                        ""
+                      )}
+                      {list.listThree ? (
+                        <li className="text-sm md:text-xl">{list.listThree}</li>
+                      ) : (
+                        ""
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex justify-center md:w-1/2">
+            <div className="second-sec-img flex items-center justify-center md:w-5/6">
+              {imageData.length > 0 ? (
+                imageData.map((item) => {
+                  const { img } = item;
+                  return (
+                    <div className="md:w-full">
+                      <img src={img} alt="sec-two-img" className="w-full"/>
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="md:w-full">
+                  <img src={dataTwo[0].img} alt="sec-two-img" className="w-full"/>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

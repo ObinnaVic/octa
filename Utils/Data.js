@@ -195,3 +195,35 @@ export const Data = [
     },
   },
 ];
+
+export const dataTwo = [
+  {
+    Head: "Transparent trading conditions",
+    list: {
+      listOne: "0% swap.",
+      listTwo: "No Commission.",
+      listThree:
+        "Secure deposits and withdrawals via preferred payment method.",
+    },
+    id: 1,
+    img: "https://clipground.com/images/forex-png-8.png",
+  },
+  {
+    Head: "Daily trading ideas",
+    list: {
+      listOne: "Receive valuable tips for more profitable trading.",
+    },
+    id: 2,
+    img: "https://www.tradestation-international.com/global/wp-content/uploads/2019/11/forex-symbol-1-300x263.png",
+  },
+  {
+    Head: "Free educational materials",
+    list: {
+      listOne: "Watch our couse on basic aspects of trading.",
+      listTwo:
+        "Attend rgular webinars and and live trading sessions for beginners and pros.",
+    },
+    id: 3,
+    img: "https://lakforex.com/img/lakforexsecond.png",
+  },
+];
