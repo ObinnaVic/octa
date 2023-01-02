@@ -1,6 +1,10 @@
 import Layout from "../components/Layout";
 import Image from "next/image";
 import Hero from "../public/hero.jpeg";
+import ImageSix from "../public/imageSix.jpg";
+import ImageSeven from "../public/ImageSeven.jpg";
+import ImageNine from "../public/ImageNine.jpg";
+import ImageEight from "../public/ImageEight.jpg";
 import { useContext } from "react";
 import { AppContext } from "../components/Store";
 import { dataTwo } from "../Utils/Data";
@@ -15,7 +19,7 @@ export default function Home() {
 
   return (
     <Layout title={"Home-Octa"}>
-      <div className="hero-sec flex flex-col md:flex-row w-screen justify-center items-center py-12 md:py-0 px-0 md:px-50 md:pl-20">
+      <div className="hero-sec flex flex-col md:flex-row justify-center items-center py-12 md:py-0 px-0 md:px-50 md:pl-20">
         <div className="flex flex-col md:w-1/2 space-y-12 text-white text-center items-center md:items-start md:mb-0 mb-10 md:text-left">
           <h1 className="max-w-md font-bold text-white text-4xl md:text-6xl">
             Dream Big.
@@ -42,6 +46,7 @@ export default function Home() {
               const { Head, id, list } = item;
               return (
                 <div
+                  key={id}
                   className="bg-white hover:bg-blue-700 transition-transform p-3 md:p-7 mb-4 rounded-3xl w-5/6 md:w-3/5 shadow-lg"
                   onMouseOver={(e) => HandleSecImages(id)}
                 >
@@ -72,16 +77,41 @@ export default function Home() {
                   const { img } = item;
                   return (
                     <div className="md:w-full">
-                      <img src={img} alt="sec-two-img" className="w-full"/>
+                      <img src={img} alt="sec-two-img" className="w-full" />
                     </div>
                   );
                 })
               ) : (
                 <div className="md:w-full">
-                  <img src={dataTwo[0].img} alt="sec-two-img" className="w-full"/>
+                  <img
+                    src={dataTwo[0].img}
+                    alt="sec-two-img"
+                    className="w-full"
+                  />
                 </div>
               )}
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="third-sec bg-violet-100 flex flex-col items-center">
+        <div className="w-full md:w-1/2">
+          <h1 className="font-semibold text-2xl md:text-6xl text-center py-10">
+            Invest with the Best Global Broker Asia 2022
+          </h1>
+        </div>
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-4/5">
+            <Image src={ImageSix} className="w-full h-44" />
+          </div>
+          <div className="md:w-4/5">
+            <Image src={ImageSeven} className="w-full h-44" />
+          </div>
+          <div className="md:w-4/5">
+            <Image src={ImageEight} className="w-full h-44" />
+          </div>
+          <div className="md:w-4/5">
+            <Image src={ImageNine} className="w-full h-44" />
           </div>
         </div>
       </div>
