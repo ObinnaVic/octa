@@ -2,8 +2,8 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import Hero from "../public/hero.jpeg";
 import ImageSix from "../public/imageSix.jpg";
-import ImageSeven from "../public/ImageSeven.jpg";
-import ImageNine from "../public/ImageNine.jpg";
+import ImageSeven from "../public/ImageSeven.webp";
+import ImageNine from "../public/ImageNine.webp";
 import ImageEight from "../public/ImageEight.jpg";
 import { useContext } from "react";
 import { AppContext } from "../components/Store";
@@ -94,24 +94,32 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="third-sec bg-violet-100 flex flex-col items-center">
-        <div className="w-full md:w-1/2">
+      <div className="third-sec bg-violet-100">
+        <div className="flex flex-col w-full md:w-1/2 mx-auto">
           <h1 className="font-semibold text-2xl md:text-6xl text-center py-10">
             Invest with the Best Global Broker Asia 2022
           </h1>
         </div>
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-4/5">
-            <Image src={ImageSix} className="w-full h-44" />
+          <div className="bg-white w-full md:w-4/5">
+            <div className="w-full flex justify-end">
+              <Image src={ImageSix} className="w-1/2 h-44" />
+            </div>
           </div>
-          <div className="md:w-4/5">
-            <Image src={ImageSeven} className="w-full h-44" />
+          <div className="bg-white w-full md:w-4/5">
+            <div className="w-full flex justify-end">
+              <Image src={ImageSeven} className="w-1/2 h-44" />
+            </div>
           </div>
-          <div className="md:w-4/5">
-            <Image src={ImageEight} className="w-full h-44" />
+          <div className="bg-white w-full md:w-4/5">
+            <div className="w-full flex justify-end">
+              <Image src={ImageEight} className="w-1/2 h-44" />
+            </div>
           </div>
-          <div className="md:w-4/5">
-            <Image src={ImageNine} className="w-full h-44" />
+          <div className="bg-white w-full md:w-4/5">
+            <div className="w-full flex justify-end">
+              <Image src={ImageNine} className="w-1/2 h-44" />
+            </div>
           </div>
         </div>
       </div>
