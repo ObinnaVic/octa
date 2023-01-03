@@ -24,6 +24,10 @@ a {
   height: 80vh;
 }
 
+.hero-img {
+  width: 100%;
+}
+
 .second-sec-img {
   background-image: url("../public/image14.png");
   background-size: contain;
@@ -31,8 +35,51 @@ a {
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width:480px) {
+.sec-two-img {
+  width: 100%;
+}
+
+.best-img-one {
+  height: 100%;
+  width: 50%;
+}
+
+.best-img-two {
+  height: 100%;
+  width: 50%;
+}
+
+.best-img-three {
+  height: 100%;
+  width: 50%;
+}
+
+.best-img-four {
+  height: 100%;
+  width: 50%;
+}
+
+@media only screen and (max-width:768px) {
   .hero-sec{
-    height: 120vh;
+    height: 110vh;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+  .rating-sec {
+    height: 60vh;
+  }
+  .best-img-one {
+    height: 70%;
+    width: 100%;
+  }
+  .best-img-three {
+    height: 70%;
+    width: 65%;
+  }
+  .best-img-four {
+    height: 70%;
+    width: 100%;
   }
 }
