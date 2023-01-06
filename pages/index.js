@@ -5,6 +5,12 @@ import ImageSix from "../public/imageSix.jpg";
 import ImageSeven from "../public/ImageSeven.webp";
 import ImageNine from "../public/ImageNine.webp";
 import ImageEight from "../public/ImageEight.png";
+import investImgOne from "../public/investImgOne.webp";
+import investImgTwo from "../public/investImgTwo.webp";
+import investImgThree from "../public/investImgThree.webp";
+import investImgFour from "../public/investImgFour.webp";
+import investImgFive from "../public/investImgFive.webp";
+import investImgSix from "../public/investImgSix.webp";
 import { useContext } from "react";
 import { AppContext } from "../components/Store";
 import { dataTwo } from "../Utils/Data";
@@ -176,6 +182,26 @@ export default function Home() {
           We are constantly improving our product to make <br /> your trading
           experience better.
         </p>
+        <div className="grid md:grid-col-3 md:grid-row-4 grid-flow-col">
+          <div>
+            <Image src={investImgOne} />
+          </div>
+          <div>
+            <Image src={investImgTwo} />
+          </div>
+          <div>
+            <Image src={investImgThree} />
+          </div>
+          <div>
+            <Image src={investImgFour} />
+          </div>
+          <div>
+            <Image src={investImgFive} />
+          </div>
+          <div>
+            <Image src={investImgSix} />
+          </div>
+        </div>
       </div>
     </Layout>
   );
