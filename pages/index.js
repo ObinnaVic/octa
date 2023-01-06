@@ -8,6 +8,7 @@ import ImageEight from "../public/ImageEight.png";
 import { useContext } from "react";
 import { AppContext } from "../components/Store";
 import { dataTwo } from "../Utils/Data";
+import Rating from "../components/Rating";
 
 export default function Home() {
   const {state, dispatch} = useContext(AppContext);
@@ -153,6 +154,9 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+        <div className="flex bg-white mx-3">
+          <Rating/>
         </div>
       </div>
     </Layout>
