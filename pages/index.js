@@ -159,10 +159,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center bg-white rounded-3xl p-2 md:p-5 m-3">
-          <div>
-            <h2>Excellent</h2>
-          </div>
+        <div>
           <Rating />
         </div>
       </div>
