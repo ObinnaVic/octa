@@ -34,7 +34,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex flex-col md:w-1/2 space-y-12">
-          <Image src={Hero} className="hero-img"/>
+          <Image src={Hero} className="hero-img" alt="hero-img" />
         </div>
       </div>
       <div className="second-sec bg-violet-100">
@@ -99,13 +99,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="third-sec bg-violet-100">
+      <div className="third-sec bg-violet-100 p-0 md:p-16">
         <div className="flex flex-col w-full md:w-1/2 mx-auto">
           <h1 className="font-semibold text-2xl md:text-6xl text-center py-10">
             Invest with the Best Global Broker Asia 2022
           </h1>
         </div>
-        <div className="rating-sec grid justify-center grid-cols-2 md:grid-cols-4 grid-rows-3 md:grid-rows-1 grid-flow-col md:h-52 gap-1">
+        <div className="rating-sec grid justify-center grid-cols-2 ml-0 md:ml-12 md:grid-cols-4 grid-rows-3 md:grid-rows-1 grid-flow-col md:h-52">
           <div className="flex md:flex-col bg-white rounded-3xl relative m-3 md:w-4/5 row-span-2 md:row-span-1">
             <h2 className="text-sm md:text-2xl p-3">
               <span className="font-bold text-xl md:text-2xl">55+</span>
@@ -115,6 +115,7 @@ export default function Home() {
               <Image
                 src={ImageSix}
                 className="best-img-one rounded-3xl absolute bottom-0"
+                alt="best-sec-img"
               />
             </div>
           </div>
@@ -123,6 +124,7 @@ export default function Home() {
               <Image
                 src={ImageSeven}
                 className="best-img-two rounded-3xl absolute top-0"
+                alt="best-sec-img"
               />
             </div>
             <h2 className="text-sm md:text-2xl p-3 absolute">
@@ -135,6 +137,7 @@ export default function Home() {
               <Image
                 src={ImageEight}
                 className="best-img-three absolute top-0"
+                alt="best-sec-img"
               />
             </div>
             <h2 className="text-sm md:text-2xl p-3 absolute">
@@ -151,12 +154,16 @@ export default function Home() {
               <Image
                 src={ImageNine}
                 className="best-img-four rounded-3xl absolute bottom-0"
+                alt="best-sec-img"
               />
             </div>
           </div>
         </div>
-        <div className="flex bg-white mx-3">
-          <Rating/>
+        <div className="flex flex-col justify-center bg-white rounded-3xl p-2 md:p-5 m-3">
+          <div>
+            <h2>Excellent</h2>
+          </div>
+          <Rating />
         </div>
       </div>
     </Layout>

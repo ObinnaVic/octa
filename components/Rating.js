@@ -1,11 +1,12 @@
 import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import { dataThree } from "../Utils/Data";
 
 function Rating() {
     const items = dataThree.map((item) => {
-        const {rating, message, date, name, Head} = item;
+        const {rating, message, date, name, title} = item;
         return (
-          <div className="flex">
+          <div className="p-5">
             <div className="flex">
               {Array(rating)
                 .fill()
@@ -24,11 +25,11 @@ function Rating() {
                   </p>
                 ))}
             </div>
-            <h3 className="font-bold text-sm md:text-xl">{Head}</h3>
+            <h2 className="font-bold text-sm md:text-xl">{title}</h2>
             <p>{message}</p>
-            <div className="flex">
-              <h5>{name}</h5>
-              <h5>{date}</h5>
+            <div>
+              <h2>{name}</h2>
+              <h2>{date}</h2>
             </div>
           </div>
         );
@@ -46,14 +47,14 @@ function Rating() {
   return (
     <div>
       <AliceCarousel
-        mouseTracking
-        // infinite
+        disablemouseTracking
+        infinite
         autoPlayInterval={900}
         animationDuration={900}
-        ButtonsControls
-        DotsControls
+        disableButtonsControls
+        disableDotsControls
         responsive={responsive}
-        // autoPlay
+        autoPlay
         items={items}
       />
     </div>
