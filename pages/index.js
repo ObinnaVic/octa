@@ -105,7 +105,7 @@ export default function Home() {
             Invest with the Best Global Broker Asia 2022
           </h1>
         </div>
-        <div className="rating-sec grid justify-center grid-cols-2 ml-0 md:ml-12 md:grid-cols-4 grid-rows-3 md:grid-rows-1 grid-flow-col md:h-52">
+        <div className="rating-sec grid justify-center grid-cols-2 md:grid-cols-4 grid-rows-3 md:grid-rows-1 grid-flow-col md:h-52">
           <div className="flex md:flex-col bg-white rounded-3xl relative m-3 md:w-4/5 row-span-2 md:row-span-1">
             <h2 className="text-sm md:text-2xl p-3">
               <span className="font-bold text-xl md:text-2xl">55+</span>
@@ -159,9 +159,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="bg-white rounded-3xl p-2">
           <Rating />
         </div>
+        <div className="flex justify-center my-5 md:my-16">
+          <button className="block bg-blue-700 font-bold text-sm md:text-xl text-white rounded-full p-2 px-5 md:p-5 md:px-8">
+            JOIN US
+          </button>
+        </div>
+      </div>
+      <div className="investing-info-sec p-6 md:p-16">
+        <h2 className="font-semibold text-2xl md:text-6xl py-6 md:py-10">
+          Make investing work for you
+        </h2>
+        <p className="text-sm md:text-xl">
+          We are constantly improving our product to make <br /> your trading
+          experience better.
+        </p>
       </div>
     </Layout>
   );

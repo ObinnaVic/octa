@@ -39,6 +39,10 @@ a {
   width: 100%;
 }
 
+.rating-sec {
+  margin-left: 3%;
+}
+
 .best-img-one {
   height: 100%;
   width: 50%;
@@ -70,6 +74,7 @@ a {
   }
   .rating-sec {
     height: 60vh;
+    margin-left: 0;
   }
   .best-img-one {
     height: 70%;
