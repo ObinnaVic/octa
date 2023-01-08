@@ -3,4 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    dangerouslyAllowSVG: true,
+    domains: ["octacdn.net"],
+  },
+};

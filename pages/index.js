@@ -1,4 +1,6 @@
 import Layout from "../components/Layout";
+import AppImg from "../public/AppImg.png";
+import barcode from "../public/barcode.svg";
 import Image from "next/image";
 import Hero from "../public/hero.jpeg";
 import ImageSix from "../public/imageSix.jpg";
@@ -238,6 +240,38 @@ export default function Home() {
             <p className="md:text-xl text-sm">
               30 digital currency <br /> pairs for weekend <br /> trading
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="app-sec md:p-16">
+        <div className="bg-violet-100 flex flex-col-reverse items-center md:flex-row p-7 md:p-10 rounded-3xl">
+          <div className="text-center md:px-7 md:text-left md:w-1/2 ">
+            <h2 className="font-semibold text-center md:text-left text-2xl md:text-6xl py-6 md:py-10">
+              Trade on the go with the OctaFX Trading App
+            </h2>
+            <p className="text-xl md:text-2xl py-7">
+              Enjoy a smooth trading experience from any device. Download our
+              app and keep track of your orders whether you're in the office, on
+              vacation, or at home.
+            </p>
+            <Image src={barcode} className="hidden md:block" />
+            <div className="flex flex-col items-center">
+              <Image
+                src="https://octacdn.net/assets/img/main-page-redesign/gp-app.svg?6ad6c02f6b1b50473877f344d16c02aa1a3a1ac2"
+                className="block md:hidden p-2"
+                width={200}
+                height={50}
+              />
+              <Image
+                src="https://octacdn.net/assets/img/main-page-redesign/appstore-app.svg?3bfb036e007e7f6d37bc9e8294fe7469debbe241"
+                className="block md:hidden p-2"
+                width={200}
+                height={50}
+              />
+            </div>
+          </div>
+          <div className="flex justify-center md:w-1/2">
+            <Image src={AppImg} className="md:w-3/4 py-7" />
           </div>
         </div>
       </div>
