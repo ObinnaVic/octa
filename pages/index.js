@@ -245,7 +245,7 @@ export default function Home() {
       </div>
       <div className="app-sec md:p-16">
         <div className="bg-violet-100 flex flex-col-reverse items-center md:flex-row p-7 md:p-10 rounded-3xl">
-          <div className="text-center md:px-7 md:text-left md:w-1/2 ">
+          <div className="text-center md:px-7 md:text-left md:w-1/2">
             <h2 className="font-semibold text-center md:text-left text-2xl md:text-6xl py-6 md:py-10">
               Trade on the go with the OctaFX Trading App
             </h2>
@@ -268,6 +268,19 @@ export default function Home() {
                 width={200}
                 height={50}
               />
+            </div>
+            <div className="flex items-center justify-center bg-white rounded-full p-2 my-7 text-blue-700 md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                className="bi bi-headset mr-3"
+                viewBox="0 0 16 16"
+              >
+                <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+              </svg>
+              <p className="text-left text-xl">Start a Chat</p>
             </div>
           </div>
           <div className="flex justify-center md:w-1/2">
