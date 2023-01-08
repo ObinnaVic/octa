@@ -17,7 +17,7 @@ function Rating() {
     const items = dataThree.map((item) => {
         const {rating, message, date, name, title} = item;
         return (
-          <div className="px-10">
+          <div className="md:px-10">
             <div className="flex">
               {Array(rating)
                 .fill()
@@ -37,7 +37,7 @@ function Rating() {
                 ))}
             </div>
             <h2 className="font-bold text-sm md:text-xl">{title}</h2>
-            <p>{message}</p>
+            <p>{message}...</p>
             <div>
               <h2>{name}</h2>
               <h2>{date}</h2>
@@ -57,7 +57,7 @@ function Rating() {
 
   return (
     <div className="flex flex-col md:flex-row md:w-4/5">
-      <div className="flex flex-col items-center py-10 md:px-16">
+      <div className="flex flex-col items-center py-10 md:px-6">
         <h2 className="text-3xl font-bold">Excellent</h2>
         <div className="flex">
           {Array(5)

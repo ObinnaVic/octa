@@ -63,6 +63,10 @@ a {
   width: 50%;
 }
 
+.invest-img {
+  width: 100px;
+}
+
 
 @media only screen and (max-width:768px) {
   .hero-sec{
@@ -87,5 +91,8 @@ a {
   .best-img-four {
     height: 70%;
     width: 100%;
+  }
+  .invest-img {
+    width: 70px;
   }
 }

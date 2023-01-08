@@ -28,7 +28,7 @@ export default function Home() {
     <Layout title={"Home-Octa"}>
       <div className="hero-sec flex flex-col md:flex-row justify-center items-center md:py-0 px-0 md:px-50 ">
         <div className="flex flex-col md:w-1/2 space-y-12 text-white text-center items-center md:items-start md:mb-0 mb-10 md:text-left md:p-8">
-          <h1 className="max-w-md font-bold text-white text-4xl md:text-6xl">
+          <h1 className="font-bold text-white text-4xl md:text-6xl">
             Dream Big.
             <br /> Achieve Bigger.
           </h1>
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-3xl p-2">
+        <div className="bg-white rounded-3xl py-4 p-16 md:p-0">
           <Rating />
         </div>
         <div className="flex justify-center my-5 md:my-16">
@@ -182,24 +182,62 @@ export default function Home() {
           We are constantly improving our product to make <br /> your trading
           experience better.
         </p>
-        <div className="grid md:grid-col-3 md:grid-row-4 grid-flow-col">
-          <div>
-            <Image src={investImgOne} />
+        <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 grid-flow-col">
+          <div className="md:flex md:items-center my-5">
+            <Image
+              alt="invest-img"
+              className="invest-img rounded-3xl  md:m-3"
+              src={investImgOne}
+            />
+            <p className="md:text-xl text-sm">
+              1:500 maximum <br /> leverage ratio
+            </p>
           </div>
-          <div>
-            <Image src={investImgTwo} />
+          <div className="md:flex md:items-center my-5">
+            <Image
+              alt="invest-img"
+              className="invest-img rounded-3xl  md:m-3"
+              src={investImgTwo}
+            />
+            <p className="md:text-xl text-sm">
+              230 trading <br /> instruments
+            </p>
           </div>
-          <div>
-            <Image src={investImgThree} />
+          <div className="md:flex md:items-center my-5">
+            <Image
+              alt="invest-img"
+              className="invest-img rounded-3xl  md:m-3"
+              src={investImgThree}
+            />
+            <p className="md:text-xl text-sm">50% bonus</p>
           </div>
-          <div>
-            <Image src={investImgFour} />
+          <div className="md:flex md:items-center my-5">
+            <Image
+              alt="invest-img"
+              className="invest-img rounded-3xl  md:m-3"
+              src={investImgFour}
+            />
+            <p className="md:text-xl text-sm">Status program</p>
           </div>
-          <div>
-            <Image src={investImgFive} />
+          <div className="md:flex md:items-center my-5">
+            <Image
+              alt="invest-img"
+              className="invest-img rounded-3xl  md:m-3"
+              src={investImgFive}
+            />
+            <p className="md:text-xl text-sm">
+              24/7 Customer <br /> Support in your <br /> language
+            </p>
           </div>
-          <div>
-            <Image src={investImgSix} />
+          <div className="md:flex md:items-center my-5">
+            <Image
+              alt="invest-img"
+              className="invest-img rounded-3xl  md:m-3"
+              src={investImgSix}
+            />
+            <p className="md:text-xl text-sm">
+              30 digital currency <br /> pairs for weekend <br /> trading
+            </p>
           </div>
         </div>
       </div>
