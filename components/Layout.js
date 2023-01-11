@@ -49,7 +49,27 @@ function Layout({children, title}) {
         <Nav handleNavOff={HandleNavOff} />
       </header>
       <main onMouseOver={HandleNavOff}>{children}</main>
-      <footer></footer>
+      <footer className="md:p-16">
+        <div className="flex justify-between">
+          <div>
+            <h2 className="mb-5 text-slate-500">Company</h2>
+            <p>About Us</p>
+            <p>Award</p>
+            <p>Contact Us</p>
+          </div>
+          <div>
+            <h2 className="mb-5 text-slate-500">Media</h2>
+            <p>Company News</p>
+            <p>Videos</p>
+          </div>
+          <div>
+            <h2 className="mb-5 text-slate-500">Sponsorship</h2>
+            <p>Rip Curl Cup</p>
+            <p>Southampton FC</p>
+            <p>Bali Sports Foundation</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
