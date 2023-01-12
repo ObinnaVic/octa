@@ -6,7 +6,10 @@ export const AppContext = createContext();
 const initialState = {
     menuOn: false,
     menu: Data,
-    imageData: []
+    imageData: [],
+    companyMenu: false,
+    mediaMenu: false,
+    sponsorMenu: false,
 }
 
 const reducer = (state, action) => {
@@ -21,6 +24,9 @@ const reducer = (state, action) => {
     if (action.type === "IMAGECHANGER") {
         const currentImage = dataTwo.filter((item) => item.id === action.payload)
         return {...state, imageData: currentImage}
+    }
+    if (action.type === "COMPANYMENU") {
+        return {...state, companyMenu: true} 
     }
     return state;
 }

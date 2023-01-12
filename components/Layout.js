@@ -5,11 +5,23 @@ import Image from "next/image";
 import Nav from "./Nav";
 
 function Layout({children, title}) {
-  const { dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
+  const {companyMenu} = state;
 
   const HandleNavOff = () => {
     dispatch({ type: "MENUOFF" });
   };
+
+  const CompanyMenu =() => {
+    dispatch({type: "COMPANYMENU"})
+  }
+  const MediaMenu = () => {
+    dispatch({ type: "MENUMENU" });
+  };
+  const SponsorMenu = () => {
+    dispatch({ type: "SPONSORMENU" });
+  };
+
   return (
     <div>
       <Head>
@@ -49,25 +61,50 @@ function Layout({children, title}) {
         <Nav handleNavOff={HandleNavOff} />
       </header>
       <main onMouseOver={HandleNavOff}>{children}</main>
-      <footer className="md:p-16">
-        <div className="flex justify-between">
-          <div>
-            <h2 className="mb-5 text-slate-500">Company</h2>
-            <p>About Us</p>
-            <p>Award</p>
-            <p>Contact Us</p>
+      <footer className="md:p-16 p-6">
+        <div className="md:flex">
+          <div className="md:flex justify-between">
+            <div>
+              <div className="flex justify-between">
+                <h2 className="mb-3 md:mb-5 text-slate-500">Company</h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-chevron-down md:hidden"
+                  viewBox="0 0 16 16"
+                  onClick={() => CompanyMenu}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </div>
+              <ul className={companyMenu? "block" : "hidden md:block"}>
+                <li>About Us</li>
+                <li>Award</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-5 text-slate-500">Media</h2>
+              <ul>
+                <li>Company News</li>
+                <li>Videos</li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-5 text-slate-500">Sponsorship</h2>
+              <ul>
+                <li>Rip Curl Cup</li>
+                <li>Southampton FC</li>
+                <li>Bali Sports Foundation</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h2 className="mb-5 text-slate-500">Media</h2>
-            <p>Company News</p>
-            <p>Videos</p>
-          </div>
-          <div>
-            <h2 className="mb-5 text-slate-500">Sponsorship</h2>
-            <p>Rip Curl Cup</p>
-            <p>Southampton FC</p>
-            <p>Bali Sports Foundation</p>
-          </div>
+          <div></div>
         </div>
       </footer>
     </div>
