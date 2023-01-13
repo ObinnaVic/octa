@@ -62,7 +62,7 @@ function Layout({children, title}) {
       </header>
       <main onMouseOver={HandleNavOff}>{children}</main>
       <footer className="md:p-16 p-6">
-        <div className="md:flex">
+        <div className="md:flex justify-between">
           <div className="md:flex justify-between">
             <div className="mb-4 md:mb-0">
               <div className="flex justify-between items-center">
@@ -193,7 +193,9 @@ function Layout({children, title}) {
                 )}
               </div>
               <ul
-                className={sponsorMenu ? "block ml-3 md:ml-0" : "hidden md:block"}
+                className={
+                  sponsorMenu ? "block ml-3 md:ml-0" : "hidden md:block"
+                }
               >
                 <li>Rip Curl Cup</li>
                 <li>Southampton FC</li>
@@ -201,7 +203,33 @@ function Layout({children, title}) {
               </ul>
             </div>
           </div>
-          <div></div>
+          <div>
+            <div>
+              <h2 className="mb-5 text-black md:text-slate-500 font-bold md:font-normal">
+                Get The App
+              </h2>
+              <div className="flex items-center pb-3">
+                <img
+                  src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/trading-app-redesign.svg?b7df906ece81137b5885fdcb93f638a3="
+                  alt="footer logo"
+                />
+                <div className="ml-3">
+                  <h5 className="font-bold">Trading App</h5>
+                  <h6>Get it on</h6>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <img
+                  src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/copy-trading-app-redesign.svg?1861c08829fe5ff0acc9cbcaad9dac17="
+                  alt="footer logo"
+                />
+                <div className="ml-3">
+                  <h5 className="font-bold">Copy Trading App</h5>
+                  <h6>Get it on</h6>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
