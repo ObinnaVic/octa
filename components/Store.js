@@ -26,7 +26,19 @@ const reducer = (state, action) => {
         return {...state, imageData: currentImage}
     }
     if (action.type === "COMPANYMENU") {
-        return {...state, companyMenu: true} 
+        return state.companyMenu === false
+          ? { ...state, companyMenu: true }
+          : { ...state, companyMenu: false };
+    }
+    if (action.type === "MEDIAMENU") {
+        return state.mediaMenu === false
+          ? { ...state, mediaMenu: true }
+          : { ...state, mediaMenu: false };
+    }
+    if (action.type === "SPONSORMENU") {
+        return state.sponsorMenu === false
+          ? { ...state, sponsorMenu: true }
+          : { ...state, sponsorMenu: false };
     }
     return state;
 }

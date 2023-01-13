@@ -254,19 +254,21 @@ export default function Home() {
               app and keep track of your orders whether you're in the office, on
               vacation, or at home.
             </p>
-            <Image src={barcode} className="hidden md:block" />
+            <Image src={barcode} className="hidden md:block" alt="barcode"/>
             <div className="flex flex-col items-center">
               <Image
                 src="https://octacdn.net/assets/img/main-page-redesign/gp-app.svg?6ad6c02f6b1b50473877f344d16c02aa1a3a1ac2"
                 className="block md:hidden p-2"
                 width={200}
                 height={50}
+                alt="app icon"
               />
               <Image
                 src="https://octacdn.net/assets/img/main-page-redesign/appstore-app.svg?3bfb036e007e7f6d37bc9e8294fe7469debbe241"
                 className="block md:hidden p-2"
                 width={200}
                 height={50}
+                alt="app icon"
               />
             </div>
             <div className="flex items-center justify-center bg-white rounded-full p-2 my-7 text-blue-700 md:hidden">
@@ -284,7 +286,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex justify-center md:w-1/2">
-            <Image src={AppImg} className="md:w-3/4 py-7" />
+            <Image src={AppImg} className="md:w-3/4 py-7" alt="app img"/>
           </div>
         </div>
       </div>
