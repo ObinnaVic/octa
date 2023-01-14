@@ -62,8 +62,8 @@ function Layout({children, title}) {
       </header>
       <main onMouseOver={HandleNavOff}>{children}</main>
       <footer className="md:p-16 p-6">
-        <div className="md:flex justify-between">
-          <div className="md:flex justify-between">
+        <div className="flex flex-col-reverse md:flex-row justify-between">
+          <div className="md:flex justify-between md:w-1/2 my-5 md:my-0">
             <div className="mb-4 md:mb-0">
               <div className="flex justify-between items-center">
                 <h2 className="mb-2 md:mb-5 text-black font-bold md:font-normal md:text-slate-500">
@@ -203,10 +203,11 @@ function Layout({children, title}) {
               </ul>
             </div>
           </div>
-          <div>
+          <hr />
+          <div className="flex flex-col-reverse md:flex-row justify-between md:w-1/2 my-5 md:my-0">
             <div>
               <h2 className="mb-5 text-black md:text-slate-500 font-bold md:font-normal">
-                Get The App
+                GET THE APP
               </h2>
               <div className="flex items-center pb-3">
                 <img
@@ -228,6 +229,15 @@ function Layout({children, title}) {
                   <h6>Get it on</h6>
                 </div>
               </div>
+            </div>
+            <div>
+              <h2 className="mb-5 text-black md:text-slate-500 font-bold md:font-normal">
+                FOLLOW US
+              </h2>
+              <img
+                src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/oc-blog-logo_black.svg?d76d764698de7ae1e7d443b91edc6e56"
+                alt="ocblog logo"
+              />
             </div>
           </div>
         </div>
