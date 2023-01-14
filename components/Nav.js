@@ -12,7 +12,7 @@ function Nav({ handleNavOff }) {
   
   return (
     <div>
-      <div className="hidden lg:flex font-bold justify-evenly">
+      <div className="hidden lg:flex font-bold justify-evenly bg-white">
         {Data.map((item) => {
           const { menu, id } = item;
           return (
