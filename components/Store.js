@@ -10,6 +10,7 @@ const initialState = {
     companyMenu: false,
     mediaMenu: false,
     sponsorMenu: false,
+    chatVisible: false,
 }
 
 const reducer = (state, action) => {
@@ -39,6 +40,9 @@ const reducer = (state, action) => {
         return state.sponsorMenu === false
           ? { ...state, sponsorMenu: true }
           : { ...state, sponsorMenu: false };
+    }
+    if (action.type === "CHATVISIBILITY") {
+      return { ...state, chatVisible: true };
     }
     return state;
 }

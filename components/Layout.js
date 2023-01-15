@@ -1,16 +1,32 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../components/Store";
 import Head from "next/head";
 import Image from "next/image";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import Chat from "./Chat";
 
 function Layout({children, title}) {
-  const {dispatch} = useContext(AppContext)
+  const [callSign, setCallSign] = useState("");
+  const {dispatch, state} = useContext(AppContext);
+  const {chatVisible} = state;
 
   const HandleNavOff = () => {
     dispatch({ type: "MENUOFF" });
   };
+
+  const HandleCallSign = () => {
+    setCallSign("START A LIVE CHAT");
+  }
+
+  const ResetCallSign =() => {
+    setCallSign("");
+  }
+
+  const HandleShowChat = () => {
+    dispatch({type: "CHATVISIBILITY"})
+  }
+
 
 
   return (
@@ -28,12 +44,12 @@ function Layout({children, title}) {
           <Image src="/logo.svg" alt="logo" width={200} height={120} />
           <div className="flex items-center w-2/6 justify-evenly">
             <span>
-              <button className="hidden md:block bg-blue-700 font-bold text-xl text-white rounded-full p-5 px-8">
+              <button className="hidden md:block bg-blue-700 font-bold text-xl text-white rounded-full p-3 px-8">
                 OPEN ACCOUNT
               </button>
             </span>
             <span>
-              <button className="hidden md:block bg-slate-200 font-bold text-xl text-blue-700 rounded-full p-5 px-10">
+              <button className="hidden md:block bg-slate-200 font-bold text-xl text-blue-700 rounded-full p-3 px-10">
                 LOG IN
               </button>
             </span>
@@ -41,7 +57,7 @@ function Layout({children, title}) {
               <Image
                 className="rounded cursor-pointer"
                 src="/flag.svg"
-                width={40}
+                width={30}
                 height={10}
                 alt="flag"
               />
@@ -54,20 +70,30 @@ function Layout({children, title}) {
       <main onMouseOver={HandleNavOff}>{children}</main>
       <hr className="hidden md:block" />
       <footer className="md:px-16 p-6">
-        <Footer/>
+        <Footer />
       </footer>
-      <div className="hidden md:flex justify-center fixed bottom-0 right-0 bg-blue-700 w-20 p-5 m-5 rounded-full cursor-pointer hover:w-40">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          fill="currentColor"
-          className="bi bi-headset text-white"
-          viewBox="0 0 16 16"
+      {!chatVisible ? (
+        <div
+          className="hidden md:flex justify-evenly items-center fixed bottom-0 right-0 bg-blue-700 w-20 p-5 m-5 rounded-full cursor-pointer hover:w-60 duration-200"
+          onMouseEnter={HandleCallSign}
+          onMouseLeave={ResetCallSign}
+          onClick={HandleShowChat}
         >
-          <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
-        </svg>
-      </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            className="bi bi-headset text-white"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+          </svg>
+          <p className="text-white font-bold">{callSign}</p>
+        </div>
+      ) : (
+        <Chat />
+      )}
     </div>
   );
 }

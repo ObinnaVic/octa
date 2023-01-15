@@ -56,7 +56,7 @@ export default function Home() {
               return (
                 <div
                   key={id}
-                  className="bg-white hover:bg-blue-700 p-3 md:p-7 mb-4 rounded-3xl w-5/6 md:w-3/5 shadow-lg"
+                  className="bg-white hover:bg-blue-700 p-3 duration-1000 md:p-7 mb-4 rounded-3xl w-5/6 md:w-3/5 shadow-lg"
                   onMouseOver={(e) => HandleSecImages(id)}
                 >
                   <h3 className="font-semibold text-sm md:text-3xl">{Head}</h3>
