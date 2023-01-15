@@ -13,7 +13,7 @@ function Menu({ handleNavOff }) {
           <div key={id}>
             {menuOn && (
               <div
-                className="flex justify-between p-20 absolute bg-white w-screen"
+                className="flex justify-between p-20 absolute bg-white w-full"
                 onMouseLeave={handleNavOff}
               >
                 <div>
