@@ -11,6 +11,7 @@ const initialState = {
     mediaMenu: false,
     sponsorMenu: false,
     chatVisible: false,
+    chatItems: [],
 }
 
 const reducer = (state, action) => {
@@ -43,6 +44,9 @@ const reducer = (state, action) => {
     }
     if (action.type === "CHATVISIBILITY") {
       return { ...state, chatVisible: true };
+    }
+    if (action.type === "SUBMITCHAT") {
+        action.payload? [...state.chatItems, action.payload] : {...state}
     }
     return state;
 }
