@@ -4,7 +4,7 @@ import { AppContext } from "./Store";
 function Chat() {
   const {state, dispatch} = useContext(AppContext);
   const {chatItems} = state
-  const [chatInput, setChatInput] = useState("");
+  const [chatInput, setChatInput] = useState();
 
   console.log(chatItems);
 
@@ -40,7 +40,7 @@ function Chat() {
             <span>Support</span>
             </div>
         </div>
-        <div className="w-full h-1/3 md:h-2/4">
+        <div className="flex flex-col justify-end items-end w-full h-1/3 md:h-2/4">
           {chatItems}
         </div>
         <form onSubmit={HandleChatSubmit} className="flex flex-col items-center p-2">
