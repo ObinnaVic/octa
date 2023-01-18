@@ -46,8 +46,8 @@ const reducer = (state, action) => {
       return { ...state, chatVisible: true };
     }
     if (action.type === "SUBMITCHAT") {
-        const newChat = action.payload? [...state.chatItems, action.payload] : ""
-        return {...state, chatItems: newChat}
+        const newChat = [...state.chatItems, action.payload];
+        return {...state, chatItems: newChat};
     }
     return state;
 }
