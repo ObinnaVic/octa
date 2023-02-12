@@ -7,20 +7,20 @@ import Footer from "./Footer";
 import Chat from "./Chat";
 
 function Layout({children, title}) {
-  const [callSign, setCallSign] = useState("");
   const {dispatch, state} = useContext(AppContext);
-  const {chatVisible} = state;
+  const {chatVisible, chatSign} = state;
 
   const HandleNavOff = () => {
     dispatch({ type: "MENUOFF" });
   };
 
   const HandleCallSign = () => {
-    setCallSign("START A LIVE CHAT");
+    let signMessage = "START A LIVE CHAT";
+    dispatch({type: "ADDCHATSIGN", payload: signMessage})
   }
 
   const ResetCallSign =() => {
-    setCallSign("");
+    dispatch({type: "REMOVECHATSIGN"})
   }
 
   const HandleShowChat = () => {
@@ -74,7 +74,7 @@ function Layout({children, title}) {
       </footer>
       {!chatVisible ? (
         <div
-          className="hidden md:flex justify-evenly items-center fixed bottom-0 right-0 bg-blue-700 w-20 p-5 m-5 rounded-full cursor-pointer hover:w-60 duration-200"
+          className="hidden md:flex justify-evenly items-center fixed bottom-0 right-0 bg-blue-700 w-20 p-5 m-5 rounded-full cursor-pointer hover:w-72 hover:h-20 duration-200"
           onMouseEnter={HandleCallSign}
           onMouseLeave={ResetCallSign}
           onClick={HandleShowChat}
@@ -89,7 +89,7 @@ function Layout({children, title}) {
           >
             <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
           </svg>
-          <p className="text-white font-bold">{callSign}</p>
+          <p className="text-white font-bold">{chatSign}</p>
         </div>
       ) : (
         <Chat />

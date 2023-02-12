@@ -16,6 +16,10 @@ function Chat() {
     setChatInput("");
     setBot(true);
   }
+
+  const HandleCloseChat = () => {
+    dispatch({type: "CLOSECHAT"});
+  }
   
 
   return (
@@ -27,8 +31,9 @@ function Chat() {
           width="50"
           height="30"
           fill="currentColor"
-          class="bi bi-dash text-white ml-auto"
+          className="bi bi-dash text-white ml-auto cursor-pointer"
           viewBox="0 0 16 16"
+          onClick={HandleCloseChat}
         >
           <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
         </svg>
@@ -52,7 +57,7 @@ function Chat() {
             </div>
           );
         })}
-        <div className="fixed">
+        <div>
           {bot ? (
             <div className="flex justify-start p-4 bg-blue-500 my-2 font-bold text-white">
               Thank You For Contacting Us. <br /> We Are Currently Unavailable At the Moment. <br /> Try Again Later.

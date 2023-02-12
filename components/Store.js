@@ -10,6 +10,7 @@ const initialState = {
     companyMenu: false,
     mediaMenu: false,
     sponsorMenu: false,
+    chatSign: "",
     chatVisible: false,
     chatItems: [],
 }
@@ -42,12 +43,21 @@ const reducer = (state, action) => {
           ? { ...state, sponsorMenu: true }
           : { ...state, sponsorMenu: false };
     }
+    if (action.type === "ADDCHATSIGN") {
+        return {...state, chatSign: action.payload}
+    }
+    if (action.type === "REMOVECHATSIGN") {
+        return {...state, chatSign: ""};
+    }
     if (action.type === "CHATVISIBILITY") {
       return { ...state, chatVisible: true };
     }
     if (action.type === "SUBMITCHAT") {
         const newChat = [...state.chatItems, action.payload];
         return {...state, chatItems: newChat};
+    }
+    if (action.type === "CLOSECHAT") {
+        return {...state, chatVisible: false, chatSign: ""};
     }
     return state;
 }
