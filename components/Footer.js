@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useContext } from 'react'
 import { AppContext } from './Store';
 
@@ -161,7 +162,9 @@ function Footer() {
               GET THE APP
             </h2>
             <div className="flex items-center pb-3">
-              <img
+              <Image
+                width={100}
+                height={50}
                 src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/trading-app-redesign.svg?b7df906ece81137b5885fdcb93f638a3="
                 alt="footer logo"
               />
@@ -171,7 +174,9 @@ function Footer() {
               </div>
             </div>
             <div className="flex items-center">
-              <img
+              <Image
+                width={100}
+                height={50}
                 src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/copy-trading-app-redesign.svg?1861c08829fe5ff0acc9cbcaad9dac17="
                 alt="footer logo"
               />
@@ -185,7 +190,9 @@ function Footer() {
             <h2 className="mb-5 text-black md:text-slate-500 font-bold md:font-normal">
               FOLLOW US
             </h2>
-            <img
+            <Image
+              width={100}
+              height={50}
               src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/oc-blog-logo_black.svg?d76d764698de7ae1e7d443b91edc6e56"
               alt="ocblog logo"
             />

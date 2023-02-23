@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { AppContext } from './Store';
+import Image from 'next/image';
 
 function Menu({ handleNavOff }) {
   const { state, dispatch } = useContext(AppContext);
@@ -45,7 +46,7 @@ function Menu({ handleNavOff }) {
                 </div>
                 <div className="flex flex-col items-center">
                   <h4 className="font-bold pb-5">{infos.itemFour.head}</h4>
-                  <img className="py-4 w-72" src={infos.itemFour.link} alt="menus"/>
+                  <Image className="py-4" width={288} height={200} src={infos.itemFour.link} alt="menus"/>
                   <button className="rounded bg-slate-200 p-3 text-black">
                     {infos.itemFour.button}
                   </button>

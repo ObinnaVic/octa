@@ -6,6 +6,6 @@ const nextConfig = {
 module.exports = {
   images: {
     dangerouslyAllowSVG: true,
-    domains: ["octacdn.net"],
+    domains: ["octacdn.net", "static-markup.octaglobal.info"],
   },
 };
