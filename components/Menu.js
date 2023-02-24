@@ -1,9 +1,8 @@
 import { useContext } from 'react'
 import { AppContext } from './Store';
-import Image from 'next/image';
 
 function Menu({ handleNavOff }) {
-  const { state, dispatch } = useContext(AppContext);
+  const { state} = useContext(AppContext);
   const { menuOn, menu } = state;
 
   return (
@@ -46,7 +45,7 @@ function Menu({ handleNavOff }) {
                 </div>
                 <div className="flex flex-col items-center">
                   <h4 className="font-bold pb-5">{infos.itemFour.head}</h4>
-                  <Image className="py-4" width={288} height={200} src={infos.itemFour.link} alt="menus"/>
+                  <img className="py-4" src={infos.itemFour.link} alt="menus"/>
                   <button className="rounded bg-slate-200 p-3 text-black">
                     {infos.itemFour.button}
                   </button>

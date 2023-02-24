@@ -21,7 +21,7 @@ function Footer() {
       <div className="flex flex-col-reverse md:flex-row justify-between">
         <div className="md:flex justify-between md:w-1/2 my-5 md:my-0">
           <div className="mb-4 md:mb-0">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center active:bg-slate-200 active:text-blue-700 px-2 p-1 md:px-0 md:p-0 rounded-3xl">
               <h2 className="mb-2 md:mb-5 text-black font-bold md:font-normal md:text-slate-500">
                 Company
               </h2>
@@ -66,7 +66,7 @@ function Footer() {
             </ul>
           </div>
           <div className="mb-4 md:mb-0">
-            <div className="flex justify-between">
+            <div className="flex justify-between active:bg-slate-200 active:text-blue-700 px-2 p-1 md:px-0 md:p-0 rounded-3xl">
               <h2 className="mb-2 md:mb-5 text-black md:text-slate-500 font-bold md:font-normal">
                 Media
               </h2>
@@ -110,7 +110,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center active:bg-slate-200 active:text-blue-700 px-2 p-1 md:px-0 md:p-0 rounded-3xl">
               <h2 className="mb-2 md:mb-5 text-black md:text-slate-500 font-bold md:font-normal">
                 Sponsorship
               </h2>
@@ -163,9 +163,9 @@ function Footer() {
             </h2>
             <div className="flex items-center pb-3">
               <Image
-                width={100}
-                height={50}
-                src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/trading-app-redesign.svg?b7df906ece81137b5885fdcb93f638a3="
+                width={50}
+                height={20}
+                src="/blueLogo.svg"
                 alt="footer logo"
               />
               <div className="ml-3">
@@ -175,9 +175,9 @@ function Footer() {
             </div>
             <div className="flex items-center">
               <Image
-                width={100}
-                height={50}
-                src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/copy-trading-app-redesign.svg?1861c08829fe5ff0acc9cbcaad9dac17="
+                width={50}
+                height={20}
+                src="/greenLogo.svg"
                 alt="footer logo"
               />
               <div className="ml-3">
@@ -191,16 +191,16 @@ function Footer() {
               FOLLOW US
             </h2>
             <Image
-              width={100}
-              height={50}
-              src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/oc-blog-logo_black.svg?d76d764698de7ae1e7d443b91edc6e56"
+              width={170}
+              height={100}
+              src="/octablog.svg"
               alt="ocblog logo"
             />
             <div className="flex justify-between my-8 w-3/5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="20"
+                height="20"
                 fill="currentColor"
                 class="bi bi-facebook cursor-pointer"
                 viewBox="0 0 16 16"
@@ -209,8 +209,8 @@ function Footer() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="20"
+                height="20"
                 fill="currentColor"
                 class="bi bi-twitter cursor-pointer"
                 viewBox="0 0 16 16"
@@ -219,8 +219,8 @@ function Footer() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="20"
+                height="20"
                 fill="currentColor"
                 class="bi bi-youtube cursor-pointer"
                 viewBox="0 0 16 16"
@@ -229,8 +229,8 @@ function Footer() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="20"
+                height="20"
                 fill="currentColor"
                 class="bi bi-instagram cursor-pointer"
                 viewBox="0 0 16 16"
@@ -239,8 +239,8 @@ function Footer() {
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
+                width="20"
+                height="20"
                 fill="currentColor"
                 class="bi bi-telegram cursor-pointer"
                 viewBox="0 0 16 16"

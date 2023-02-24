@@ -30,7 +30,7 @@ export const Data = [
       },
       itemFour: {
           head: "Our best spreads and conditions",
-          link: "https://static-markup.octaglobal.info/common/components-frontsite/header.v2/__partials__/assets/img/spreads.png?d355bfb2329110fba6488a12e5e3f171",
+          link: "/tradingImg.png",
           button: "learn more",
       },
     },
@@ -64,7 +64,7 @@ export const Data = [
       },
       itemFour: {
           head: "The OctaFX Trading App",
-          link: "https://static-markup.octaglobal.info/common/components-frontsite/header.v2/__partials__/assets/img/app.png?673a554b117ecf0e96595777a80645c5",
+          link: "/tradingPlatformImg.png",
           button: "Download",
 
       },
@@ -95,7 +95,7 @@ export const Data = [
       },
       itemFour: {
           head: "IB monthly rewards",
-          link: "https://static-markup.octaglobal.info/common/components-frontsite/header.v2/__partials__/assets/img/ib.png?628586beb615e2fa520eb1cae8b0b366",
+          link: "/referralImg.png",
           button: "Get Reward",
       },
     },
@@ -122,7 +122,7 @@ export const Data = [
       },
       itemFour: {
           head: "Champion Demo Contest",
-          link: "https://static-markup.octaglobal.info/common/components-frontsite/header.v2/__partials__/assets/img/contest.png?88f9d55260fd7475c095a3642ec419a0",
+          link: "/promoImg.png",
           button: "Join next round!",
       },
     },
@@ -160,7 +160,7 @@ export const Data = [
       },
       itemFour: {
           head: "Three Easy Steps to Start Trading",
-          link: "https://static-markup.octaglobal.info/common/components-frontsite/header.v2/__partials__/assets/img/trading.png?60ce280ed377cf307c8305f040e4bd41",
+          link: "/analysisImg.png",
           button: "Discover Now",
       },
     },
@@ -189,7 +189,7 @@ export const Data = [
       },
       itemFour: {
           head: "Copy Trading App",
-          link: "https://static-markup.octaglobal.info/common/components-frontsite/header.v2/__partials__/assets/img/copytrade.png?2b3e71336132b0f479c0740e1fbab413",
+          link: "/copytradingImg.png",
           button: "Download",
       },
     },

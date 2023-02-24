@@ -41,8 +41,44 @@ function Layout({children, title}) {
           className="sticky top-0 bg-white flex justify-between items-center p-5"
           onMouseOver={HandleNavOff}
         >
-          <Image src="/logo.svg" alt="logo" width={200} height={120} />
-          <div className="flex items-center w-2/6 justify-evenly">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="30"
+            fill="currentColor"
+            className="bi bi-list md:hidden"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+          <Image
+            src="/logo.svg"
+            alt="logo"
+            className="md:w-52 mx-auto md:mx-0"
+            width={100}
+            height={60}
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="30"
+            fill="currentColor"
+            className="bi bi-box-arrow-in-right md:hidden"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+            />
+          </svg>
+          <div className="hidden md:flex items-center w-2/6 justify-evenly">
             <span>
               <button className="hidden md:block bg-blue-700 font-bold text-xl text-white rounded-full p-3 px-8">
                 OPEN ACCOUNT
@@ -55,7 +91,7 @@ function Layout({children, title}) {
             </span>
             <span>
               <Image
-                className="rounded cursor-pointer"
+                className="hidden md:flex rounded cursor-pointer"
                 src="/flag.svg"
                 width={30}
                 height={10}

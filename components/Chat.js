@@ -40,7 +40,7 @@ function Chat() {
       </div>
       <div className="shadow-lg flex items-center md:p-3 ">
         <img
-          src="https://static-markup.octaglobal.info/common/components-frontsite/footer.v1/assets/img/trading-app-redesign.svg?b7df906ece81137b5885fdcb93f638a3="
+          src="/blueLogo.svg"
           alt="footer logo"
           className="w-11 h-11 rounded-full"
         />
