@@ -13,6 +13,7 @@ const initialState = {
     chatSign: "",
     chatVisible: false,
     chatItems: [],
+    mobileNav: false,
 }
 
 const reducer = (state, action) => {
@@ -58,6 +59,12 @@ const reducer = (state, action) => {
     }
     if (action.type === "CLOSECHAT") {
         return {...state, chatVisible: false, chatSign: ""};
+    }
+    if (action.type === "OPENNAV") {
+        return {...state, mobileNav: true}
+    }
+    if (action.type === "CLOSENAV") {
+        return {...state, mobileNav: false}
     }
     return state;
 }
